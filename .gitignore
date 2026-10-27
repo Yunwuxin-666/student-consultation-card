@@ -1,0 +1,8 @@
+config.json
+outputs/
+minutes/
+work/
+*.ndjson
+*.manifest.json
+__pycache__/
+*.pyc

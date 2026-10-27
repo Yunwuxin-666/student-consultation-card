@@ -1,0 +1,14 @@
+{
+  "feishu": {
+    "base_token": "<your-base-token>",
+    "consultation_table_id": "<consultation-table-id>",
+    "student_table_id": "<student-table-id>",
+    "review_table_id": "<review-table-id>",
+    "archive_field": "职业画布归档"
+  },
+  "products": {
+    "ai_product_camp": "<public-product-url>",
+    "aigc_camp": "<public-product-url>",
+    "one_to_one": "<public-product-url>"
+  }
+}

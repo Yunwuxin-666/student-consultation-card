@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0;width:2000px;height:1125px;overflow:hidden}
+body{background:#f8f8f4;color:#111;font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+body:before{content:"";position:absolute;inset:48px;border:2px solid #111;pointer-events:none}
+body:after{content:"";position:absolute;left:48px;top:48px;width:32px;height:32px;background:#f3d72f}
+main{position:absolute;left:118px;top:98px;width:1764px;height:940px}
+.top{height:190px;border-bottom:2px solid #111}
+.eyebrow{font:700 18px Consolas,monospace;letter-spacing:2.4px;color:#444}
+.title{display:flex;align-items:center;gap:28px;margin-top:11px}h1{font-size:76px;letter-spacing:1px;line-height:1;margin:0;font-weight:900}
+.tag{background:#f3d72f;border:1.5px solid #111;padding:12px 18px;font-size:23px;font-weight:800}.sub{font-size:25px;color:#3d3d3d;margin-top:17px}
+.canvas{height:672px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);border-left:1px solid #111;border-top:1px solid #111}
+.cell{position:relative;background:#fff;border-right:1px solid #111;border-bottom:1px solid #111;padding:22px 24px 15px}
+.cell:nth-child(5){background:#fffbe0}.head{display:flex;align-items:center;gap:15px;margin-bottom:16px}.no{display:inline-block;background:#f3d72f;border:1px solid #111;font:700 21px Consolas,monospace;padding:5px 8px}.name{font-size:29px;font-weight:900}
+.body{font-size:23px;line-height:1.48;color:#292929}.body b{font-weight:900;color:#111}.body div{margin:3px 0}
+.bottom{height:78px;display:flex;justify-content:space-between;align-items:center;font-size:21px;color:#333}.bottom strong{color:#111;font-weight:800}.circle{display:inline-block;border-top:2px solid #111;padding-top:9px}
+</style></head><body><main><header class="top">{{HEADER}}</header><section class="canvas">{{CELLS}}</section><footer class="bottom">{{FOOTER}}</footer></main></body></html>

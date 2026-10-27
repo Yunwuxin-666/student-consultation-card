@@ -1,0 +1,4 @@
+interface:
+  display_name: "学员咨询诊断卡"
+  short_description: "从飞书妙记解析咨询，匹配主推课程与真实转行案例，生成七模块诊断文档"
+  default_prompt: "使用 $student-consultation-card，根据这个飞书妙记链接生成学员诊断文档，匹配适合的主推产品和往期学员案例。"
