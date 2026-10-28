@@ -1,6 +1,8 @@
 # 三张标准图：职业规划画布、学习行动卡、往期案例卡
 
-三图是七模块文档的视觉摘要。顺序与图位固定：第1节咨询信息后是职业规划画布，第5节行动正文后是学习行动卡，第7节案例正文后是往期案例卡。保留旁边文字正文，卡片不用表格、转化解读或泛泛口号。如果本地还安装有咨询案例匹配和项目管理技能，可借鉴其判断方法；本技能自身的阶段匹配与行动规则必须完整执行。
+案例卡需与正文同步呈现更多有依据的转行后信息：最终工作城市、公司规模、工作强度。读取评价表对应字段后，仅当它们与最终去向能明确对应且卡面可读时写入；缺失项省略。版面不足时保留正文的完整事实，不缩小字号硬塞，也不把多个 Offer 的信息拼成一个结果。
+
+三图是七模块文档的视觉摘要。顺序与图位固定：第1节咨询信息后是职业规划画布，第5节行动正文后是学习行动卡，第7节案例正文后是往期案例卡。保留旁边文字正文，卡片不用表格、转化解读或泛泛口号。成品结构参考[示例文档](https://he9za7tvkd.feishu.cn/docx/ShetdG5ZRoUAAtxYzFZctqj9nCd)；该链接不是下一位学员的事实来源。用户要求的来源技能：`C:\Users\Administrator\.codex\skills\consultation-point\SKILL.md`（咨询.skill）与 `C:\Users\Administrator\.codex\skills\项目管理.skill\SKILL.md`（项目管理.skill）。首次使用时按技能本身的相关引用核对规则；本流程只取其中适用的判断方法，不沿用咨询.skill的多列大表或项目管理.skill的企业RACI。
 
 ## 职业规划画布
 
@@ -22,11 +24,11 @@
 
 ## 生成与查看
 
-填写 UTF-8 JSON。`canvas` 对象包含 `tag`、`subtitle`、9 个 `blocks`（每项 `heading` 和 `lines` 数组）、`source_note`、`footer_phrase`；可选 `eyebrow` 与 `title`。行内用 `**文字**` 标重点。`action` 和 `cases` 对象沿用现有渲染器字段。三个对象可放在同一个 JSON 中，以下两条命令共用它：
+填写 UTF-8 JSON。`canvas` 对象包含 `tag`、`subtitle`、9 个 `blocks`（每项 `heading` 和 `lines` 数组）、`source_note`、`footer_phrase`；可选 `eyebrow` 与 `title`。行内用 `**文字**` 标重点。`action` 和 `cases` 对象沿用现有渲染器字段。工作区 `outputs/王同学_职业规划画布数据.json` 和 `outputs/王同学_咨询卡片数据.json` 只是测试数据，不可复制给下一位学员。三个对象可放在同一个 JSON 中，以下两条命令共用它：
 
 ```powershell
-python -X utf8 ./scripts/render_canvas.py --input ./outputs/<学员>_三图数据.json --output-dir ./outputs --slug <slug>
-python -X utf8 ./scripts/render_cards.py --input ./outputs/<学员>_三图数据.json --output-dir ./outputs --slug <slug>
+& <python> -X utf8 'C:\Users\Administrator\.codex\skills\student-consultation-card\scripts\render_canvas.py' --input './outputs/<学员>_三图数据.json' --output-dir './outputs' --slug '<slug>'
+& <python> -X utf8 'C:\Users\Administrator\.codex\skills\student-consultation-card\scripts\render_cards.py' --input './outputs/<学员>_三图数据.json' --output-dir './outputs' --slug '<slug>'
 ```
 
 脚本用 Chrome 或 Edge 将 HTML 渲染成三张 PNG，并保留 HTML 供修改。三张图统一使用黄白黑配色、瑞士网格和克制的 Figma 式编号标注。排版以对齐、留白与细线分区建立层级；黄色只强调编号、阶段产出或关键结果，不铺满大面积装饰。中文由 HTML 排版，避免图片生成造成文字错误。不要回退到拼贴纸张、营销海报、蓝色后台看板或渐变信息卡。
