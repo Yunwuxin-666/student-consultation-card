@@ -1,5 +1,7 @@
 # 飞书读取与案例数据
 
+案例查询时用内部真实姓名和其他身份字段关联营课表、评价表及重复记录，仅用于核实与去重；同一人多次报名、回访或多个 Offer 只产生一个对外案例。对外写入前将真实姓名统一改为“姓氏＋同学”（如张思思→张同学，复姓欧阳某→欧阳同学）。同姓不同人并列时采用“张同学（案例一／案例二）”或只保留一例，绝不通过展示名字消歧。原名只留在内部核查材料，不得流入正文、卡片数据、图片或云文档。发布前以本次选用案例的全部原名逐一搜索本地稿和导入后的云文档，并人工查看图片；出现一次即修正。
+
 ## CLI和会议
 
 优先 `Get-Command lark-cli`。本机可用：`C:\Users\Administrator\AppData\Local\Programs\lark-cli\lark-cli.exe`。显式沿用 `--as user`；鉴权失败时参考已安装的 lark-shared，不切换身份绕过权限。相关技能根目录为 `C:\Users\Administrator\.agents\skills`，会议走 lark-meeting，Wiki走 lark-doc，表格走 lark-base；只读取当前操作需要的参考。
